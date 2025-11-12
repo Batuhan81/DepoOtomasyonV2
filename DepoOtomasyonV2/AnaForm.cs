@@ -19,6 +19,7 @@ namespace DepoOtomasyonV2
 
 
         MalzemeListe malzemeCrud;
+        CalisanForm calisanForm;
         UrunListesi urunListesi;
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -55,6 +56,20 @@ namespace DepoOtomasyonV2
             else
             {
                 urunListesi.BringToFront();
+            }
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(calisanForm == null || calisanForm.IsDisposed)
+            {
+                calisanForm = new CalisanForm();
+                calisanForm.MdiParent = this;
+                calisanForm.Show();
+            }
+            else
+            {
+                calisanForm.BringToFront();
             }
         }
     }

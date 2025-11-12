@@ -169,6 +169,8 @@
     <Compile Include="AnaForm.Designer.cs">
       <DependentUpon>AnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classlarim\GenericRepository.cs" />
+    <Compile Include="Classlarim\Yardimcilar.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Data\Islem.cs" />
     <Compile Include="Data\Kategori.cs" />
@@ -290,6 +292,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\down_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usergroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usergroup_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

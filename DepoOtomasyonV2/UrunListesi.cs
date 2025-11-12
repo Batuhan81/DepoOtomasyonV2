@@ -61,15 +61,17 @@ namespace DepoOtomasyonV2
             gridView1.Columns["EkFiyat"].DisplayFormat.FormatString = "C2"; // TL formatı
 
 
-            //Başlıkları ve hücreleri orlamak için
+            //Başlıkları ve hücreleri ortalamak için
             gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 
 
-            //Satır çizgilerinde düzenleme
-            gridView1.OptionsView.RowAutoHeight = true;
-            gridView1.OptionsView.EnableAppearanceEvenRow = true;
-            gridView1.OptionsView.EnableAppearanceOddRow = true;
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("The Bezier");
+
+
+            //Grup başlıkları düzenlemesi
+            gridView1.Appearance.GroupRow.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            gridView1.Appearance.GroupRow.ForeColor = Color.DarkSlateGray;
 
         }
 
