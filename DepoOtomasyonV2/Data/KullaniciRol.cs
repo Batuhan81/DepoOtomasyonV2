@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DepoOtomasyonV2.Data
+{
+    public class KullaniciRol
+    {
+        [Key]
+        public int Id { get; set; }
+        [Required, MaxLength(50)]
+        public string Ad { get; set; }
+
+
+        [ForeignKey("Yetki")]
+        public int YetkiId { get; set; }
+        public virtual Yetki Yetki { get; set; }
+
+        public bool Aktiflik { get; set; }
+
+    }
+}
