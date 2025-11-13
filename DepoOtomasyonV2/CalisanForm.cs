@@ -26,7 +26,7 @@ namespace DepoOtomasyonV2
         {
 
         }
-        int? ıd =null;
+        int? id =null;
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (e.FocusedRowHandle < 0)
@@ -35,7 +35,7 @@ namespace DepoOtomasyonV2
             // Hücre değerlerini almanın kısa yolu
             string GetString(string fieldName) => gridView1.GetFocusedRowCellValue(fieldName)?.ToString();
 
-             ıd = int.Parse(GetString("Id"));
+             id = int.Parse(GetString("Id"));
             string ad = GetString("Ad");
             string soyad = GetString("Soyad");
             string pozisyon = GetString("kullanicirols_Ad");
@@ -90,11 +90,20 @@ namespace DepoOtomasyonV2
         {
 
         }
-
+        LogKayitlari logKayitlari;
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            LogKayitlari git=new LogKayitlari(ıd);
-            git.Show();
+            if (logKayitlari == null || logKayitlari.IsDisposed)
+            {
+                logKayitlari = new LogKayitlari(id);
+                logKayitlari.MdiParent = this.MdiParent;  // Eğer bu kod alt formdan çalışıyorsa
+                logKayitlari.Show();
+            }
+            else
+            {
+                logKayitlari.BringToFront();
+                LogKayitlari git = new LogKayitlari(id);
+            }
         }
     }
 }

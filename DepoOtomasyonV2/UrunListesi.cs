@@ -57,6 +57,7 @@ namespace DepoOtomasyonV2
             gridView1.GroupSummary.Add(groupSummary);
             gridView1.Columns["TahminiMaliyet"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             gridView1.Columns["TahminiMaliyet"].DisplayFormat.FormatString = "C2"; // TL formatı
+
             gridView1.Columns["EkFiyat"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             gridView1.Columns["EkFiyat"].DisplayFormat.FormatString = "C2"; // TL formatı
 

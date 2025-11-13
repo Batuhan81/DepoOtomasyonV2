@@ -21,6 +21,7 @@ namespace DepoOtomasyonV2
         MalzemeListe malzemeCrud;
         CalisanForm calisanForm;
         UrunListesi urunListesi;
+        LogKayitlari logKayitlari;
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if(malzemeCrud == null || malzemeCrud.IsDisposed)
@@ -70,6 +71,20 @@ namespace DepoOtomasyonV2
             else
             {
                 calisanForm.BringToFront();
+            }
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (logKayitlari == null || logKayitlari.IsDisposed)
+            {
+                logKayitlari = new LogKayitlari();
+                logKayitlari.MdiParent = this;
+                logKayitlari.Show();
+            }
+            else
+            {
+                logKayitlari.BringToFront();
             }
         }
     }
