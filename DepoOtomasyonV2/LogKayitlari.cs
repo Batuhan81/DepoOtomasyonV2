@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DepoOtomasyonV2.Classlarim;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,20 +27,17 @@ namespace DepoOtomasyonV2
 
             if (calisanId.HasValue)
             {
-                sqlDataSource1.Queries[0].Parameters["PersonelId"].Value = calisanId.Value;
+                var param = new MySqlParameter("@PersonelId", calisanId);
+                gridControl1.DataSource = DataLister.Listele("LoglarById", param);
             }
             else
             {
-                sqlDataSource1.Queries[0].Parameters["PersonelId"].Value = DBNull.Value;
+                gridControl1.DataSource = DataLister.Listele("Loglar", new MySqlParameter("@PersonelId", DBNull.Value));
             }
-
-            sqlDataSource1.Fill();
             gridView1.Columns["Tarih"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             gridView1.Columns["Tarih"].DisplayFormat.FormatString = "dd.MM.yyyy HH:mm:ss";
             // GridView’in satırının üstüne otomatik filtre satırı ekler
             gridView1.OptionsView.ShowAutoFilterRow = true;
-
-
         }
     }
 }

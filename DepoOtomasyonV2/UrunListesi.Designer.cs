@@ -29,46 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.SelectQuery selectQuery3 = new DevExpress.DataAccess.Sql.SelectQuery();
-            DevExpress.DataAccess.Sql.Column column19 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression19 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table13 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column20 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression20 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table14 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column21 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression21 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table15 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column22 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression22 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Column column23 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression23 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Column column24 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression24 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table16 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column25 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression25 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table17 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column26 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.CustomExpression customExpression3 = new DevExpress.DataAccess.Sql.CustomExpression();
-            DevExpress.DataAccess.Sql.Column column27 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression26 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Join join11 = new DevExpress.DataAccess.Sql.Join();
-            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo11 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
-            DevExpress.DataAccess.Sql.Join join12 = new DevExpress.DataAccess.Sql.Join();
-            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo12 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
-            DevExpress.DataAccess.Sql.Join join13 = new DevExpress.DataAccess.Sql.Join();
-            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo13 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
-            DevExpress.DataAccess.Sql.Join join14 = new DevExpress.DataAccess.Sql.Join();
-            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo14 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
-            DevExpress.DataAccess.Sql.Join join15 = new DevExpress.DataAccess.Sql.Join();
-            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo15 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
-            DevExpress.DataAccess.Sql.Table table18 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Sorting sorting3 = new DevExpress.DataAccess.Sql.Sorting();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression27 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UrunListesi));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colAd = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colkategoris_Ad = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -86,7 +47,6 @@
             // gridControl1
             // 
             this.gridControl1.DataMember = "urunstoks";
-            this.gridControl1.DataSource = this.sqlDataSource1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -95,106 +55,6 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.ConnectionName = "localhost_deposunum_Connection";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            columnExpression19.ColumnName = "Ad";
-            table13.MetaSerializable = "<Meta X=\"340\" Y=\"30\" Width=\"125\" Height=\"224\" />";
-            table13.Name = "uruns";
-            columnExpression19.Table = table13;
-            column19.Expression = columnExpression19;
-            column20.Alias = "kategoris_Ad";
-            columnExpression20.ColumnName = "Ad";
-            table14.MetaSerializable = "<Meta X=\"495\" Y=\"30\" Width=\"125\" Height=\"144\" />";
-            table14.Name = "kategoris";
-            columnExpression20.Table = table14;
-            column20.Expression = columnExpression20;
-            columnExpression21.ColumnName = "Id";
-            table15.MetaSerializable = "<Meta X=\"190\" Y=\"30\" Width=\"125\" Height=\"264\" />";
-            table15.Name = "urunvaryasyons";
-            columnExpression21.Table = table15;
-            column21.Expression = columnExpression21;
-            columnExpression22.ColumnName = "TahminiMaliyet";
-            columnExpression22.Table = table13;
-            column22.Expression = columnExpression22;
-            columnExpression23.ColumnName = "EkFiyat";
-            columnExpression23.Table = table15;
-            column23.Expression = columnExpression23;
-            column24.Alias = "renks_Ad";
-            columnExpression24.ColumnName = "Ad";
-            table16.MetaSerializable = "<Meta X=\"805\" Y=\"30\" Width=\"125\" Height=\"104\" />";
-            table16.Name = "renks";
-            columnExpression24.Table = table16;
-            column24.Expression = columnExpression24;
-            columnExpression25.ColumnName = "Deger";
-            table17.MetaSerializable = "<Meta X=\"650\" Y=\"30\" Width=\"125\" Height=\"104\" />";
-            table17.Name = "numaras";
-            columnExpression25.Table = table17;
-            column25.Expression = columnExpression25;
-            column26.Alias = "StokMiktari";
-            customExpression3.Expression = "ISNULL([urunstoks.StokMiktari],0)";
-            column26.Expression = customExpression3;
-            columnExpression26.ColumnName = "MinimumStok";
-            columnExpression26.Table = table15;
-            column27.Expression = columnExpression26;
-            selectQuery3.Columns.Add(column19);
-            selectQuery3.Columns.Add(column20);
-            selectQuery3.Columns.Add(column21);
-            selectQuery3.Columns.Add(column22);
-            selectQuery3.Columns.Add(column23);
-            selectQuery3.Columns.Add(column24);
-            selectQuery3.Columns.Add(column25);
-            selectQuery3.Columns.Add(column26);
-            selectQuery3.Columns.Add(column27);
-            selectQuery3.Name = "urunstoks";
-            relationColumnInfo11.NestedKeyColumn = "Id";
-            relationColumnInfo11.ParentKeyColumn = "UrunId";
-            join11.KeyColumns.Add(relationColumnInfo11);
-            join11.Nested = table13;
-            join11.Parent = table15;
-            relationColumnInfo12.NestedKeyColumn = "Id";
-            relationColumnInfo12.ParentKeyColumn = "KategoriId";
-            join12.KeyColumns.Add(relationColumnInfo12);
-            join12.Nested = table14;
-            join12.Parent = table13;
-            relationColumnInfo13.NestedKeyColumn = "Id";
-            relationColumnInfo13.ParentKeyColumn = "NumaraId";
-            join13.KeyColumns.Add(relationColumnInfo13);
-            join13.Nested = table17;
-            join13.Parent = table15;
-            relationColumnInfo14.NestedKeyColumn = "Id";
-            relationColumnInfo14.ParentKeyColumn = "RenkId";
-            join14.KeyColumns.Add(relationColumnInfo14);
-            join14.Nested = table16;
-            join14.Parent = table15;
-            relationColumnInfo15.NestedKeyColumn = "UrunVaryasyonId";
-            relationColumnInfo15.ParentKeyColumn = "Id";
-            join15.KeyColumns.Add(relationColumnInfo15);
-            table18.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"144\" />";
-            table18.Name = "urunstoks";
-            join15.Nested = table18;
-            join15.Parent = table15;
-            join15.SqlJoinType = ((DevExpress.DataAccess.Sql.SqlJoinType)(DevExpress.DataAccess.Sql.SqlJoinType.LeftOuter));
-            selectQuery3.Relations.Add(join11);
-            selectQuery3.Relations.Add(join12);
-            selectQuery3.Relations.Add(join13);
-            selectQuery3.Relations.Add(join14);
-            selectQuery3.Relations.Add(join15);
-            columnExpression27.ColumnName = "Deger";
-            columnExpression27.Table = table17;
-            sorting3.Expression = columnExpression27;
-            selectQuery3.Sorting.Add(sorting3);
-            selectQuery3.Tables.Add(table18);
-            selectQuery3.Tables.Add(table15);
-            selectQuery3.Tables.Add(table13);
-            selectQuery3.Tables.Add(table14);
-            selectQuery3.Tables.Add(table17);
-            selectQuery3.Tables.Add(table16);
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            selectQuery3});
-            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // gridView1
             // 
@@ -326,7 +186,6 @@
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraGrid.Columns.GridColumn colAd;
         private DevExpress.XtraGrid.Columns.GridColumn colkategoris_Ad;
         private DevExpress.XtraGrid.Columns.GridColumn colId;

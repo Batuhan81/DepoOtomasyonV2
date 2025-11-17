@@ -117,41 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="customSqlQuery1.Sql" xml:space="preserve">
-    <value>SELECT 
-    urunvaryasyons.Id,
-    uruns.Ad AS UrunAdi,
-    kategoris.Ad AS KategoriAdi,
-    uruns.TahminiMaliyet,
-    renks.Ad AS RenkAdi,
-    numaras.Deger AS NumaraDegeri,
-    urunvaryasyons.EkFiyat,
-    COALESCE(urunstoks.StokMiktari, 0) AS StokMiktari,
-    urunvaryasyons.MinimumStok
-FROM urunvaryasyons
-INNER JOIN uruns 
-    ON uruns.Id = urunvaryasyons.UrunId
-INNER JOIN kategoris 
-    ON kategoris.Id = uruns.KategoriId
-INNER JOIN renks 
-    ON renks.Id = urunvaryasyons.RenkId
-INNER JOIN numaras 
-    ON numaras.Id = urunvaryasyons.NumaraId
-LEFT JOIN urunstoks 
-    ON urunstoks.UrunVaryasyonId = urunvaryasyons.Id;</value>
-  </data>
-  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJVcnVuQWRpIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkthdGVnb3JpQWRpIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRhaG1pbmlNYWxpeWV0IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJSZW5rQWRpIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik51bWFyYURlZ2VyaSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkVrRml5YXQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlN0b2tNaWt0YXJpIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iTWluaW11bVN0b2siIFR5cGU9IkludDMyIiAvPjwvVmlldz48VmlldyBOYW1lPSJtYWx6ZW1lc3Rva3MiPjxGaWVsZCBOYW1lPSJJZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkFkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN0b2tNaWt0YXJpIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJrYXRlZ29yaXNfQWQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQmlyaW1GaXlhdCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iQmlyaW0iIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
-  </data>
-  <metadata name="sqlDataSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>181, 17</value>
-  </metadata>
-  <data name="sqlDataSource2.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTIiPjxWaWV3IE5hbWU9Im1hbHplbWVzIj48RmllbGQgTmFtZT0iSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJBZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCaXJpbSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCaXJpbUZpeWF0IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJNYWx6ZW1lRm90byIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPbHVzdHVydWxtYVRhcmloIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iTWluaW11bVN0b2siIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkFrdGlmbGlrIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJrYXRlZ29yaXNfQWQiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>81</value>
   </metadata>
