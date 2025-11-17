@@ -172,8 +172,10 @@
     <Compile Include="Classlarim\DataLister.cs" />
     <Compile Include="Classlarim\Db.cs" />
     <Compile Include="Classlarim\GenericRepository.cs" />
+    <Compile Include="Classlarim\SqlCommand\CalisanCommand.cs" />
     <Compile Include="Classlarim\SqlQueries\CalisanQueries.cs" />
     <Compile Include="Classlarim\SqlQueries\LogQueries.cs" />
+    <Compile Include="Classlarim\SqlCommand\MalzemeCommand.cs" />
     <Compile Include="Classlarim\SqlQueries\MalzemeQueries.cs" />
     <Compile Include="Classlarim\SqlQueries\UrunQueries.cs" />
     <Compile Include="Classlarim\Yardimcilar.cs" />

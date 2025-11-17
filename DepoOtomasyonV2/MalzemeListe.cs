@@ -1,9 +1,11 @@
 ﻿using DepoOtomasyonV2.Classlarim;
+using DepoOtomasyonV2.Classlarim.SqlQueries;
 using DepoOtomasyonV2.Data;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,25 +60,76 @@ namespace DepoOtomasyonV2
                 var kategoriler = await kategorirepo.GetAllAsync();
                 var veri = kategoriler.Where(o => o.Aktiflik == true && o.Tur == "Malzeme").Select(o => new
                 {
-                    Id=o.Id,
-                    Ad=o.Ad
+                    Id = o.Id,
+                    Ad = o.Ad
                 }).ToList();
-                lookUpEdit2.Properties.DataSource = veri;
-                lookUpEdit2.Properties.ValueMember = "Id";
-                lookUpEdit2.Properties.DisplayMember = "Ad";
-                lookUpEdit2.Properties.NullText = "Seçiniz";
+                lookUpKategori.Properties.DataSource = veri;
+                lookUpKategori.Properties.ValueMember = "Id";
+                lookUpKategori.Properties.DisplayMember = "Ad";
+                lookUpKategori.Properties.NullText = "Seçiniz";
 
             }
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@Ad", txtAd.Text),
+                    new MySqlParameter("@Birim", combobirim.Text),
+                    new MySqlParameter("@BirimFiyat", txtbirimFiyat.Text),
+                    new MySqlParameter("@MalzemeFoto", txtFotoYolu.Text), 
+                    new MySqlParameter("@OlusturulmaTarih", DateTime.Now),
+                    new MySqlParameter("@MinimumStok", txtMinStok.Text),
+                    new MySqlParameter("@Aktiflik", true),
+                    new MySqlParameter("@KategoriId", Convert.ToInt32(lookUpKategori.EditValue))
+                };
 
+                int result = Db.Execute(MalzemeCommands.Ekle, parameters);
+
+                if (result > 0)
+                    MessageBox.Show("Malzeme başarıyla eklendi!");
+                else
+                    MessageBox.Show("Malzeme ekleme başarısız.");
+
+                // Listeyi yenile
+                gridControl2.DataSource = DataLister.Listele("MalzemeDetay");
+                Yardimcilar.Temizle(groupControl1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata: " + ex.Message);
+            }
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void simpleButton2_Click(object sender, EventArgs e)//sil butonu
         {
+            try
+            {
+                int seciliId = Convert.ToInt32(gridView2.GetFocusedRowCellValue("Id"));
 
+                var parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@Id", seciliId)
+                };
+
+                int result = Db.Execute(MalzemeCommands.PasifSil, parameters);
+
+                if (result > 0)
+                    MessageBox.Show("Malzeme pasif olarak silindi.");
+                else
+                    MessageBox.Show("Silme işlemi başarısız.");
+
+                // Listeyi yenile
+                gridControl2.DataSource = DataLister.Listele("MalzemeDetay");
+                Yardimcilar.Temizle(groupControl1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

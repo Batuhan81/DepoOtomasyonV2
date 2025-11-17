@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -60,18 +59,19 @@
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtFotoYolu = new DevExpress.XtraEditors.TextEdit();
+            this.txtbirimFiyat = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.lookUpKategori = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtMinStok = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.combobirim = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAd = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -96,11 +96,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFotoYolu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbirimFiyat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpKategori.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMinStok.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combobirim.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemButtonEdit1
@@ -372,24 +373,44 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.txtFotoYolu);
+            this.groupControl1.Controls.Add(this.txtbirimFiyat);
             this.groupControl1.Controls.Add(this.simpleButton2);
             this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.lookUpEdit2);
-            this.groupControl1.Controls.Add(this.textEdit2);
+            this.groupControl1.Controls.Add(this.lookUpKategori);
+            this.groupControl1.Controls.Add(this.txtMinStok);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.comboBoxEdit1);
+            this.groupControl1.Controls.Add(this.combobirim);
             this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.txtAd);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.lookUpEdit1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(365, 344);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Malzeme Bilgileri";
+            // 
+            // txtFotoYolu
+            // 
+            this.txtFotoYolu.Location = new System.Drawing.Point(95, 184);
+            this.txtFotoYolu.Name = "txtFotoYolu";
+            this.txtFotoYolu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtFotoYolu.Properties.Appearance.Options.UseFont = true;
+            this.txtFotoYolu.Size = new System.Drawing.Size(125, 24);
+            this.txtFotoYolu.TabIndex = 13;
+            this.txtFotoYolu.Visible = false;
+            // 
+            // txtbirimFiyat
+            // 
+            this.txtbirimFiyat.Location = new System.Drawing.Point(145, 101);
+            this.txtbirimFiyat.Name = "txtbirimFiyat";
+            this.txtbirimFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtbirimFiyat.Properties.Appearance.Options.UseFont = true;
+            this.txtbirimFiyat.Size = new System.Drawing.Size(125, 24);
+            this.txtbirimFiyat.TabIndex = 12;
             // 
             // simpleButton2
             // 
@@ -413,25 +434,25 @@
             this.labelControl5.TabIndex = 10;
             this.labelControl5.Text = "Kategori:";
             // 
-            // lookUpEdit2
+            // lookUpKategori
             // 
-            this.lookUpEdit2.Location = new System.Drawing.Point(145, 160);
-            this.lookUpEdit2.Name = "lookUpEdit2";
-            this.lookUpEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lookUpEdit2.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lookUpKategori.Location = new System.Drawing.Point(145, 160);
+            this.lookUpKategori.Name = "lookUpKategori";
+            this.lookUpKategori.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lookUpKategori.Properties.Appearance.Options.UseFont = true;
+            this.lookUpKategori.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit2.Size = new System.Drawing.Size(125, 24);
-            this.lookUpEdit2.TabIndex = 9;
+            this.lookUpKategori.Size = new System.Drawing.Size(125, 24);
+            this.lookUpKategori.TabIndex = 9;
             // 
-            // textEdit2
+            // txtMinStok
             // 
-            this.textEdit2.Location = new System.Drawing.Point(145, 131);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(125, 24);
-            this.textEdit2.TabIndex = 8;
+            this.txtMinStok.Location = new System.Drawing.Point(145, 131);
+            this.txtMinStok.Name = "txtMinStok";
+            this.txtMinStok.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMinStok.Properties.Appearance.Options.UseFont = true;
+            this.txtMinStok.Size = new System.Drawing.Size(125, 24);
+            this.txtMinStok.TabIndex = 8;
             // 
             // labelControl4
             // 
@@ -463,16 +484,20 @@
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Birim:";
             // 
-            // comboBoxEdit1
+            // combobirim
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(145, 101);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.combobirim.Location = new System.Drawing.Point(145, 72);
+            this.combobirim.Name = "combobirim";
+            this.combobirim.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.combobirim.Properties.Appearance.Options.UseFont = true;
+            this.combobirim.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(125, 24);
-            this.comboBoxEdit1.TabIndex = 4;
+            this.combobirim.Properties.Items.AddRange(new object[] {
+            "Adet",
+            "M2",
+            "Kg"});
+            this.combobirim.Size = new System.Drawing.Size(125, 24);
+            this.combobirim.TabIndex = 4;
             // 
             // simpleButton1
             // 
@@ -486,14 +511,14 @@
             this.simpleButton1.Text = "Kaydet";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // textEdit1
+            // txtAd
             // 
-            this.textEdit1.Location = new System.Drawing.Point(145, 44);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(125, 24);
-            this.textEdit1.TabIndex = 2;
+            this.txtAd.Location = new System.Drawing.Point(145, 44);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAd.Properties.Appearance.Options.UseFont = true;
+            this.txtAd.Size = new System.Drawing.Size(125, 24);
+            this.txtAd.TabIndex = 2;
             // 
             // labelControl1
             // 
@@ -504,23 +529,6 @@
             this.labelControl1.Size = new System.Drawing.Size(24, 18);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Ad:";
-            // 
-            // lookUpEdit1
-            // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(145, 72);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lookUpEdit1.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.Items.AddRange(new object[] {
-            "Adet",
-            "M2",
-            "Kg"});
-            this.lookUpEdit1.Properties.NullText = "[EditValue is null]";
-            this.lookUpEdit1.Properties.PopupSizeable = true;
-            this.lookUpEdit1.Size = new System.Drawing.Size(125, 24);
-            this.lookUpEdit1.TabIndex = 1;
             // 
             // MalzemeListe
             // 
@@ -556,11 +564,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFotoYolu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbirimFiyat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpKategori.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMinStok.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combobirim.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -582,7 +591,7 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtAd;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl gridControl2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
@@ -596,14 +605,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn colAktiflik;
         private DevExpress.XtraGrid.Columns.GridColumn colkategoris_Ad1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit combobirim;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.LookUpEdit lookUpKategori;
+        private DevExpress.XtraEditors.TextEdit txtMinStok;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.ComboBoxEdit lookUpEdit1;
+        private DevExpress.XtraEditors.TextEdit txtbirimFiyat;
+        private DevExpress.XtraEditors.TextEdit txtFotoYolu;
     }
 }
 

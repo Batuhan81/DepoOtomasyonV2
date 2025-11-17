@@ -23,15 +23,6 @@ namespace DepoOtomasyonV2.Classlarim
                 case "CalisanlarByRol":
                     sql = CalisanQueries.ListeleByRol;
                     break;
-                case "CalisanSil":
-                    sql = CalisanQueries.Sil;
-                    break;
-                case "CalisanGuncelle":
-                    sql = CalisanQueries.Guncelle;
-                    break;
-                case "CalisanEkle":
-                    sql = CalisanQueries.Ekle;
-                    break;
                 case "Loglar":
                     sql = LogQueries.Listele;
                     break;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -55,6 +56,21 @@ namespace DepoOtomasyonV2.Classlarim
             {
                 Image image = Image.FromFile(dosyaYolu);
                 return Boyutlandir(image, width, height);
+            }
+        }
+        public static void Temizle(GroupControl groupBox)
+        {
+            foreach (Control control in groupBox.Controls)
+            {
+                if (control is PictureBox pictureBox)
+                {
+                    pictureBox.Image = null;
+                    pictureBox.Visible = false;
+                }
+                if (control is TextEdit || control is LookUpEdit || control is ComboBoxEdit)
+                {
+                    control.Text = null;
+                }
             }
         }
     }

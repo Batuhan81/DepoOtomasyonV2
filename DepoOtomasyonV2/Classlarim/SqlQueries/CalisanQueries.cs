@@ -37,20 +37,6 @@ namespace DepoOtomasyonV2.Classlarim
             INNER JOIN kullanicirols ON kullanicirols.Id = kullanicis.RolId
             WHERE kullanicis.RolId = @RolId";
 
-        public static readonly string Sil = @"
-            DELETE FROM kullanicis
-            WHERE Id = @Id";
-
-        public static readonly string Guncelle = @"
-            UPDATE kullanicis
-            SET Ad = @Ad,
-                Soyad = @Soyad,
-                Telefon = @Telefon,
-                Mail = @Mail
-            WHERE Id = @Id";
-
-        public static readonly string Ekle = @"
-            INSERT INTO kullanicis (Ad, Soyad, Telefon, Mail, RolId)
-            VALUES (@Ad, @Soyad, @Telefon, @Mail, @RolId)";
+        
     }
 }
