@@ -54,6 +54,29 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression5 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MalzemeListe));
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery2 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column5 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression6 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table4 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column6 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression7 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column7 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression8 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column8 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression9 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column9 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression10 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column10 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression11 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column11 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression12 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column12 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression13 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column13 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression14 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table5 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Join join3 = new DevExpress.DataAccess.Sql.Join();
+            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo3 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -68,6 +91,7 @@
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAd1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -75,11 +99,24 @@
             this.colBirimFiyat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMalzemeFoto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOlusturulmaTarih = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMinimumStok1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMinimumStok = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAktiflik = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colKategoriId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colkategoris_Ad1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -95,7 +132,20 @@
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).BeginInit();
+            this.splitContainerControl2.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).BeginInit();
+            this.splitContainerControl2.Panel2.SuspendLayout();
+            this.splitContainerControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemButtonEdit1
@@ -276,7 +326,7 @@
             // 
             // splitContainerControl1.Panel2
             // 
-            this.splitContainerControl1.Panel2.Controls.Add(this.groupControl1);
+            this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(1785, 666);
             this.splitContainerControl1.SplitterPosition = 1408;
@@ -285,6 +335,7 @@
             // gridControl2
             // 
             this.gridControl2.DataMember = "malzemes";
+            this.gridControl2.DataSource = this.sqlDataSource2;
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView2;
@@ -293,6 +344,64 @@
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            // 
+            // sqlDataSource2
+            // 
+            this.sqlDataSource2.ConnectionName = "localhost_deposunum_Connection";
+            this.sqlDataSource2.Name = "sqlDataSource2";
+            columnExpression6.ColumnName = "Id";
+            table4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"244\" />";
+            table4.Name = "malzemes";
+            columnExpression6.Table = table4;
+            column5.Expression = columnExpression6;
+            columnExpression7.ColumnName = "Ad";
+            columnExpression7.Table = table4;
+            column6.Expression = columnExpression7;
+            columnExpression8.ColumnName = "Birim";
+            columnExpression8.Table = table4;
+            column7.Expression = columnExpression8;
+            columnExpression9.ColumnName = "BirimFiyat";
+            columnExpression9.Table = table4;
+            column8.Expression = columnExpression9;
+            columnExpression10.ColumnName = "MalzemeFoto";
+            columnExpression10.Table = table4;
+            column9.Expression = columnExpression10;
+            columnExpression11.ColumnName = "OlusturulmaTarih";
+            columnExpression11.Table = table4;
+            column10.Expression = columnExpression11;
+            columnExpression12.ColumnName = "MinimumStok";
+            columnExpression12.Table = table4;
+            column11.Expression = columnExpression12;
+            columnExpression13.ColumnName = "Aktiflik";
+            columnExpression13.Table = table4;
+            column12.Expression = columnExpression13;
+            column13.Alias = "kategoris_Ad";
+            columnExpression14.ColumnName = "Ad";
+            table5.MetaSerializable = "<Meta X=\"185\" Y=\"30\" Width=\"125\" Height=\"144\" />";
+            table5.Name = "kategoris";
+            columnExpression14.Table = table5;
+            column13.Expression = columnExpression14;
+            selectQuery2.Columns.Add(column5);
+            selectQuery2.Columns.Add(column6);
+            selectQuery2.Columns.Add(column7);
+            selectQuery2.Columns.Add(column8);
+            selectQuery2.Columns.Add(column9);
+            selectQuery2.Columns.Add(column10);
+            selectQuery2.Columns.Add(column11);
+            selectQuery2.Columns.Add(column12);
+            selectQuery2.Columns.Add(column13);
+            selectQuery2.Name = "malzemes";
+            relationColumnInfo3.NestedKeyColumn = "Id";
+            relationColumnInfo3.ParentKeyColumn = "KategoriId";
+            join3.KeyColumns.Add(relationColumnInfo3);
+            join3.Nested = table5;
+            join3.Parent = table4;
+            selectQuery2.Relations.Add(join3);
+            selectQuery2.Tables.Add(table4);
+            selectQuery2.Tables.Add(table5);
+            this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            selectQuery2});
+            this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
             // 
             // gridView2
             // 
@@ -303,20 +412,20 @@
             this.colBirimFiyat,
             this.colMalzemeFoto,
             this.colOlusturulmaTarih,
-            this.colMinimumStok1,
+            this.colMinimumStok,
             this.colAktiflik,
-            this.colKategoriId,
             this.colkategoris_Ad1});
             this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.GroupCount = 1;
             this.gridView2.Name = "gridView2";
+            this.gridView2.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colkategoris_Ad1, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colId
             // 
             this.colId.FieldName = "Id";
             this.colId.MinWidth = 25;
             this.colId.Name = "colId";
-            this.colId.Visible = true;
-            this.colId.VisibleIndex = 0;
             this.colId.Width = 94;
             // 
             // colAd1
@@ -325,7 +434,7 @@
             this.colAd1.MinWidth = 25;
             this.colAd1.Name = "colAd1";
             this.colAd1.Visible = true;
-            this.colAd1.VisibleIndex = 1;
+            this.colAd1.VisibleIndex = 0;
             this.colAd1.Width = 94;
             // 
             // colBirim
@@ -334,7 +443,7 @@
             this.colBirim.MinWidth = 25;
             this.colBirim.Name = "colBirim";
             this.colBirim.Visible = true;
-            this.colBirim.VisibleIndex = 2;
+            this.colBirim.VisibleIndex = 1;
             this.colBirim.Width = 94;
             // 
             // colBirimFiyat
@@ -343,7 +452,7 @@
             this.colBirimFiyat.MinWidth = 25;
             this.colBirimFiyat.Name = "colBirimFiyat";
             this.colBirimFiyat.Visible = true;
-            this.colBirimFiyat.VisibleIndex = 3;
+            this.colBirimFiyat.VisibleIndex = 2;
             this.colBirimFiyat.Width = 94;
             // 
             // colMalzemeFoto
@@ -351,8 +460,6 @@
             this.colMalzemeFoto.FieldName = "MalzemeFoto";
             this.colMalzemeFoto.MinWidth = 25;
             this.colMalzemeFoto.Name = "colMalzemeFoto";
-            this.colMalzemeFoto.Visible = true;
-            this.colMalzemeFoto.VisibleIndex = 4;
             this.colMalzemeFoto.Width = 94;
             // 
             // colOlusturulmaTarih
@@ -361,17 +468,17 @@
             this.colOlusturulmaTarih.MinWidth = 25;
             this.colOlusturulmaTarih.Name = "colOlusturulmaTarih";
             this.colOlusturulmaTarih.Visible = true;
-            this.colOlusturulmaTarih.VisibleIndex = 5;
+            this.colOlusturulmaTarih.VisibleIndex = 3;
             this.colOlusturulmaTarih.Width = 94;
             // 
-            // colMinimumStok1
+            // colMinimumStok
             // 
-            this.colMinimumStok1.FieldName = "MinimumStok";
-            this.colMinimumStok1.MinWidth = 25;
-            this.colMinimumStok1.Name = "colMinimumStok1";
-            this.colMinimumStok1.Visible = true;
-            this.colMinimumStok1.VisibleIndex = 6;
-            this.colMinimumStok1.Width = 94;
+            this.colMinimumStok.FieldName = "MinimumStok";
+            this.colMinimumStok.MinWidth = 25;
+            this.colMinimumStok.Name = "colMinimumStok";
+            this.colMinimumStok.Visible = true;
+            this.colMinimumStok.VisibleIndex = 4;
+            this.colMinimumStok.Width = 94;
             // 
             // colAktiflik
             // 
@@ -379,35 +486,200 @@
             this.colAktiflik.MinWidth = 25;
             this.colAktiflik.Name = "colAktiflik";
             this.colAktiflik.Visible = true;
-            this.colAktiflik.VisibleIndex = 7;
+            this.colAktiflik.VisibleIndex = 5;
             this.colAktiflik.Width = 94;
-            // 
-            // colKategoriId
-            // 
-            this.colKategoriId.FieldName = "KategoriId";
-            this.colKategoriId.MinWidth = 25;
-            this.colKategoriId.Name = "colKategoriId";
-            this.colKategoriId.Visible = true;
-            this.colKategoriId.VisibleIndex = 8;
-            this.colKategoriId.Width = 94;
             // 
             // colkategoris_Ad1
             // 
+            this.colkategoris_Ad1.Caption = "Kategori Adı";
             this.colkategoris_Ad1.FieldName = "kategoris_Ad";
             this.colkategoris_Ad1.MinWidth = 25;
             this.colkategoris_Ad1.Name = "colkategoris_Ad1";
             this.colkategoris_Ad1.Visible = true;
-            this.colkategoris_Ad1.VisibleIndex = 9;
+            this.colkategoris_Ad1.VisibleIndex = 6;
             this.colkategoris_Ad1.Width = 94;
+            // 
+            // splitContainerControl2
+            // 
+            this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl2.Horizontal = false;
+            this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl2.Name = "splitContainerControl2";
+            // 
+            // splitContainerControl2.Panel1
+            // 
+            this.splitContainerControl2.Panel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.splitContainerControl2.Panel1.Controls.Add(this.pictureEdit1);
+            this.splitContainerControl2.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl2.Panel2
+            // 
+            this.splitContainerControl2.Panel2.Controls.Add(this.groupControl1);
+            this.splitContainerControl2.Panel2.Text = "Panel2";
+            this.splitContainerControl2.Size = new System.Drawing.Size(365, 666);
+            this.splitContainerControl2.SplitterPosition = 310;
+            this.splitContainerControl2.TabIndex = 0;
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Size = new System.Drawing.Size(361, 306);
+            this.pictureEdit1.TabIndex = 0;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.simpleButton2);
+            this.groupControl1.Controls.Add(this.labelControl5);
+            this.groupControl1.Controls.Add(this.lookUpEdit2);
+            this.groupControl1.Controls.Add(this.textEdit2);
+            this.groupControl1.Controls.Add(this.labelControl4);
+            this.groupControl1.Controls.Add(this.labelControl3);
+            this.groupControl1.Controls.Add(this.labelControl2);
+            this.groupControl1.Controls.Add(this.comboBoxEdit1);
+            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.lookUpEdit1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(365, 666);
+            this.groupControl1.Size = new System.Drawing.Size(365, 344);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Malzeme Bilgileri";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ImageOptions.Image = global::DepoOtomasyonV2.Properties.Resources.clear_32x321;
+            this.simpleButton2.Location = new System.Drawing.Point(95, 274);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(165, 54);
+            this.simpleButton2.TabIndex = 11;
+            this.simpleButton2.Text = "Sil";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(67, 166);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(69, 18);
+            this.labelControl5.TabIndex = 10;
+            this.labelControl5.Text = "Kategori:";
+            // 
+            // lookUpEdit2
+            // 
+            this.lookUpEdit2.Location = new System.Drawing.Point(145, 160);
+            this.lookUpEdit2.Name = "lookUpEdit2";
+            this.lookUpEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lookUpEdit2.Properties.Appearance.Options.UseFont = true;
+            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit2.Size = new System.Drawing.Size(125, 24);
+            this.lookUpEdit2.TabIndex = 9;
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.Location = new System.Drawing.Point(145, 131);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit2.Properties.Appearance.Options.UseFont = true;
+            this.textEdit2.Size = new System.Drawing.Size(125, 24);
+            this.textEdit2.TabIndex = 8;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(26, 134);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(110, 18);
+            this.labelControl4.TabIndex = 7;
+            this.labelControl4.Text = "Minimum Stok:";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(49, 107);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(87, 18);
+            this.labelControl3.TabIndex = 6;
+            this.labelControl3.Text = "Birim Fiyat:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(91, 78);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(45, 18);
+            this.labelControl2.TabIndex = 5;
+            this.labelControl2.Text = "Birim:";
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.Location = new System.Drawing.Point(145, 101);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(125, 24);
+            this.comboBoxEdit1.TabIndex = 4;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = global::DepoOtomasyonV2.Properties.Resources.save_32x32;
+            this.simpleButton1.Location = new System.Drawing.Point(95, 214);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(165, 54);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "Kaydet";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(145, 44);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit1.Properties.Appearance.Options.UseFont = true;
+            this.textEdit1.Size = new System.Drawing.Size(125, 24);
+            this.textEdit1.TabIndex = 2;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(112, 47);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(24, 18);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Ad:";
+            // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(145, 72);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lookUpEdit1.Properties.Appearance.Options.UseFont = true;
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.Items.AddRange(new object[] {
+            "Adet",
+            "M2",
+            "Kg"});
+            this.lookUpEdit1.Properties.NullText = "[EditValue is null]";
+            this.lookUpEdit1.Properties.PopupSizeable = true;
+            this.lookUpEdit1.Size = new System.Drawing.Size(125, 24);
+            this.lookUpEdit1.TabIndex = 1;
             // 
             // MalzemeListe
             // 
@@ -433,7 +705,21 @@
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).EndInit();
+            this.splitContainerControl2.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).EndInit();
+            this.splitContainerControl2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
+            this.splitContainerControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,19 +730,6 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.Columns.GridColumn colId;
-        private DevExpress.XtraGrid.Columns.GridColumn colAd1;
-        private DevExpress.XtraGrid.Columns.GridColumn colBirim;
-        private DevExpress.XtraGrid.Columns.GridColumn colBirimFiyat;
-        private DevExpress.XtraGrid.Columns.GridColumn colMalzemeFoto;
-        private DevExpress.XtraGrid.Columns.GridColumn colOlusturulmaTarih;
-        private DevExpress.XtraGrid.Columns.GridColumn colMinimumStok1;
-        private DevExpress.XtraGrid.Columns.GridColumn colAktiflik;
-        private DevExpress.XtraGrid.Columns.GridColumn colKategoriId;
-        private DevExpress.XtraGrid.Columns.GridColumn colkategoris_Ad1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colId1;
@@ -465,6 +738,33 @@
         private DevExpress.XtraGrid.Columns.GridColumn colkategoris_Ad;
         private DevExpress.XtraGrid.Columns.GridColumn colStokMiktari;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colAd1;
+        private DevExpress.XtraGrid.Columns.GridColumn colBirim;
+        private DevExpress.XtraGrid.Columns.GridColumn colBirimFiyat;
+        private DevExpress.XtraGrid.Columns.GridColumn colMalzemeFoto;
+        private DevExpress.XtraGrid.Columns.GridColumn colOlusturulmaTarih;
+        private DevExpress.XtraGrid.Columns.GridColumn colMinimumStok;
+        private DevExpress.XtraGrid.Columns.GridColumn colAktiflik;
+        private DevExpress.XtraGrid.Columns.GridColumn colkategoris_Ad1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
+        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.ComboBoxEdit lookUpEdit1;
     }
 }
 
