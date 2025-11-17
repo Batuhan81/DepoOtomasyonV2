@@ -17,7 +17,7 @@ namespace DepoOtomasyonV2.Data
             // Migration'ları disable edip manual olarak başlatabilirsiniz
             Database.SetInitializer<Context>(null);
         }
-        public Context() : base("name=localhost_deposunum_Connection")
+        public Context() : base("name=Context")
         {
         }
 
