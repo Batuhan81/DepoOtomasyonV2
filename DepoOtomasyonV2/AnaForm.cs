@@ -87,5 +87,19 @@ namespace DepoOtomasyonV2
                 logKayitlari.BringToFront();
             }
         }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void AnaForm_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

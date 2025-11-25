@@ -23,11 +23,16 @@ namespace DepoOtomasyonV2
 
         private void LogKayitlari_Load(object sender, EventArgs e)
         {
+            LogListesi(calisanId);
+        }
+
+        public void LogListesi(int? Id)
+        {
             gridView1.OptionsView.RowAutoHeight = true;
 
             if (calisanId.HasValue)
             {
-                var param = new MySqlParameter("@PersonelId", calisanId);
+                var param = new MySqlParameter("@PersonelId", Id);
                 gridControl1.DataSource = DataLister.Listele("LoglarById", param);
             }
             else

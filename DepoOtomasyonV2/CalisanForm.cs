@@ -93,16 +93,22 @@ namespace DepoOtomasyonV2
         LogKayitlari logKayitlari;
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            // Butondan gelen yeni çalışanın ID'si
+
             if (logKayitlari == null || logKayitlari.IsDisposed)
             {
+                // Form ilk kez açılıyor: Yeni ID ile oluştur, listeyi çek ve göster
                 logKayitlari = new LogKayitlari(id);
-                logKayitlari.MdiParent = this.MdiParent;  // Eğer bu kod alt formdan çalışıyorsa
+                logKayitlari.MdiParent = this.MdiParent;
                 logKayitlari.Show();
+                logKayitlari.LogListesi(id); 
             }
             else
             {
+                // Form zaten açıksa: Sadece öne getir, ve yeni ID ile listeyi GÜNCELLE
                 logKayitlari.BringToFront();
-                LogKayitlari git = new LogKayitlari(id);
+                // Form nesnesini tekrar oluşturmak yerine, mevcut nesnenin metodunu çağırın.
+                logKayitlari.LogListesi(id); // Yeni metot çağrısı
             }
         }
     }

@@ -41,7 +41,6 @@ namespace DepoOtomasyonV2.Classlarim
                 default:
                     throw new Exception("SQL sorgusu bulunamadı: " + key);
             }
-
             return Db.GetDataTable(sql, parameters);
         }
     }

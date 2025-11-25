@@ -10,7 +10,6 @@ namespace DepoOtomasyonV2.Classlarim
 {
     public class Db
     {
-
         public static DataTable GetDataTable(string sql, params MySqlParameter[] parameters)
         {
             var dt = new DataTable();
@@ -33,7 +32,6 @@ namespace DepoOtomasyonV2.Classlarim
             {
                 throw new Exception("Veri çekme hatası: " + ex.Message);
             }
-
             return dt;
         }
 
