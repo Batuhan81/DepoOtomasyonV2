@@ -22,6 +22,7 @@ namespace DepoOtomasyonV2
         CalisanForm calisanForm;
         UrunListesi urunListesi;
         LogKayitlari logKayitlari;
+        FrmSatis satisForm;
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if(malzemeCrud == null || malzemeCrud.IsDisposed)
@@ -95,7 +96,16 @@ namespace DepoOtomasyonV2
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            if (satisForm == null || satisForm.IsDisposed)
+            {
+                satisForm = new FrmSatis();
+                satisForm.MdiParent = this;
+                satisForm.Show();
+            }
+            else
+            {
+                satisForm.BringToFront();
+            }
         }
 
         private void AnaForm_Load(object sender, EventArgs e)

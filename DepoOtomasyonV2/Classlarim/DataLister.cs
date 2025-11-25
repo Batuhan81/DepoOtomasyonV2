@@ -38,6 +38,9 @@ namespace DepoOtomasyonV2.Classlarim
                 case "UrunListesi":
                     sql = UrunQueries.Listele;
                     break;
+                case "SatilabilirListele":
+                    sql = UrunQueries.SatilabilirListele;
+                    break;
                 default:
                     throw new Exception("SQL sorgusu bulunamadı: " + key);
             }
