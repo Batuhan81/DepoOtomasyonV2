@@ -20,7 +20,17 @@ namespace DepoOtomasyonV2
 
         private void FrmSatis_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = DataLister.Listele("SatilabilirListele");
+
+            DataTable  dt= DataLister.Listele("SatilabilirListele");
+            dt.Columns.Add("Adet");
+
+            foreach (DataRow ff in dt.Rows)
+            {
+                ff["Adet"] = "0";
+            }
+            gridControl1.DataSource = dt;
+
+           //gridControl1.DataSource = DataLister.Listele("SatilabilirListele");
             DataTable dtSiparisListesi = new DataTable("SiparisDetaylari");
 
             // Gizli takip sütunu

@@ -46,10 +46,13 @@
             DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition6 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
             DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition7 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
             DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition8 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
+            DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition9 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
+            DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition10 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
             DevExpress.XtraEditors.TableLayout.TableRowDefinition tableRowDefinition4 = new DevExpress.XtraEditors.TableLayout.TableRowDefinition();
             DevExpress.XtraEditors.TableLayout.TableRowDefinition tableRowDefinition5 = new DevExpress.XtraEditors.TableLayout.TableRowDefinition();
             DevExpress.XtraEditors.TableLayout.TableRowDefinition tableRowDefinition6 = new DevExpress.XtraEditors.TableLayout.TableRowDefinition();
             DevExpress.XtraEditors.TableLayout.TableSpan tableSpan2 = new DevExpress.XtraEditors.TableLayout.TableSpan();
+            DevExpress.XtraEditors.TableLayout.TableSpan tableSpan3 = new DevExpress.XtraEditors.TableLayout.TableSpan();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement6 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement7 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement8 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
@@ -157,7 +160,7 @@
             this.Adet.FieldName = "Adet";
             this.Adet.MinWidth = 25;
             this.Adet.Name = "Adet";
-            this.Adet.UnboundDataType = typeof(int);
+            this.Adet.UnboundDataType = typeof(long);
             this.Adet.Visible = true;
             this.Adet.VisibleIndex = 12;
             this.Adet.Width = 94;
@@ -168,6 +171,13 @@
             this.repositoryAdetItemSpinEdit1.AutoHeight = false;
             this.repositoryAdetItemSpinEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryAdetItemSpinEdit1.IsFloatValue = false;
+            this.repositoryAdetItemSpinEdit1.MaskSettings.Set("mask", "N00");
+            this.repositoryAdetItemSpinEdit1.MaxValue = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.repositoryAdetItemSpinEdit1.Name = "repositoryAdetItemSpinEdit1";
             // 
             // colDeger
@@ -277,6 +287,8 @@
             this.tileView1.ColumnSet.GroupColumn = this.colkategoris_Ad;
             this.tileView1.GridControl = this.gridControl1;
             this.tileView1.Name = "tileView1";
+            this.tileView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Tile.TileViewEditingMode.EditForm;
+            this.tileView1.OptionsTiles.AllowItemHover = true;
             this.tileView1.OptionsTiles.ColumnCount = 1;
             this.tileView1.OptionsTiles.ItemPadding = new System.Windows.Forms.Padding(23);
             this.tileView1.OptionsTiles.ItemSize = new System.Drawing.Size(500, 400);
@@ -340,12 +352,18 @@
             this.tileView1.TileColumns.Add(tableColumnDefinition6);
             this.tileView1.TileColumns.Add(tableColumnDefinition7);
             this.tileView1.TileColumns.Add(tableColumnDefinition8);
+            this.tileView1.TileColumns.Add(tableColumnDefinition9);
+            this.tileView1.TileColumns.Add(tableColumnDefinition10);
             this.tileView1.TileRows.Add(tableRowDefinition4);
             this.tileView1.TileRows.Add(tableRowDefinition5);
             this.tileView1.TileRows.Add(tableRowDefinition6);
             tableSpan2.ColumnSpan = 2;
             tableSpan2.RowSpan = 3;
+            tableSpan3.ColumnIndex = 3;
+            tableSpan3.ColumnSpan = 3;
+            tableSpan3.RowSpan = 2;
             this.tileView1.TileSpans.Add(tableSpan2);
+            this.tileView1.TileSpans.Add(tableSpan3);
             tileViewItemElement6.Column = this.colAyakkabiResmi;
             tileViewItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
             tileViewItemElement6.ImageOptions.ImageBorder = DevExpress.XtraEditors.TileItemElementImageBorderMode.None;
